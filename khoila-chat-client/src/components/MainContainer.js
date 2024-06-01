@@ -1,11 +1,13 @@
 import React from "react";
-import ChatArea from "./ChatArea";
+import CreateGroups from "./CreateGroups";
 import Sidebar from './Sidebar';
 import './myStyles.css';
 function MainContainer() {
     return <div className="main-container">
-        <Sidebar />
-        <ChatArea />
+        <Sidebar /> 
+        <CreateGroups />
+        {/* <Welcome /> */}
+        {/* <ChatArea /> */}
     </div>;
 }
 

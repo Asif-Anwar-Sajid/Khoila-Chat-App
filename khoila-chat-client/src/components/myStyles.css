@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 .main-container {
   background-color: #f4f5f8;
   /* background-color: lightskyblue; */
@@ -13,6 +13,9 @@
   flex: 0.3;
   display: flex;
   flex-direction: column;
+  background-color: #007fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   /* background-color: aqua; */
   /* border: 5px solid lightgreen; */
 }
@@ -73,8 +76,7 @@
   justify-content: center;
   align-items: center;
 
-  /* background-color: #d9d9d9; */
-  background-color: #22577a;
+  background-color: #d9d9d9;
 
   font-family: "Noto Sans", sans-serif;
   font-size: 2rem;
@@ -143,6 +145,10 @@
   overflow: scroll;
 }
 
+.messages-container::-webkit-scrollbar {
+  display: none;
+}
+
 .text-input-area {
   background-color: white;
   padding: 10px 10px;
@@ -184,10 +190,80 @@
   border-radius: 20px;
   width: max-content;
   margin-top: 10px;
+  font-family: "Noto Sans", sans-serif;
   display: flex;
   flex-direction: column;
 }
-/* .other-message-container > .conversation-container {
-  flex-direction: row;
-  gap: 10px;
-} */
+
+.welcome-logo {
+  height: 20vw;
+}
+
+.welcome-container {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* font-family: "Noto Sans", sans-serif; */
+  font-family: "Happy Monkey", system-ui;
+  color: rgba(0, 0, 0, 0.54);
+  border-bottom: 5px solid aquamarine;
+  margin: 10px;
+}
+
+.createGroups-container {
+  flex: 0.7;
+  padding: 20px 10px;
+  align-self: center;
+  margin: 10px;
+  background-color: white;
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+
+.login-container {
+  height: 90vh;
+  width: 90vw;
+  background-color: #f4f5f8;
+  border-radius: 20px;
+  display: flex;
+}
+
+.image-container {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  font-weight: bolder;
+  font-family: "Happy Monkey", system-ui;
+  color: #64d7b0;
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container span {
+  color: blue;
+}
+
+.login-box {
+  flex: 0.7;
+  background-color: white;
+  border-radius: 20px;
+  margin: 10px;
+  font-family: "Noto Sans", sans-serif;
+  color: #64d7b0;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-page-header {
+  font-size: 2rem;
+  font-family: "Happy Monkey", system-ui;
+}
