@@ -1,12 +1,11 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Workarea from "./Workarea";
+import ChatArea from "./ChatArea";
+import Sidebar from './Sidebar';
 import './myStyles.css';
-
 function MainContainer() {
     return <div className="main-container">
         <Sidebar />
-        <Workarea />
+        <ChatArea />
     </div>;
 }
 

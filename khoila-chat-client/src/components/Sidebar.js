@@ -8,21 +8,23 @@ import { IconButton } from "@mui/material";
 import React, { useState } from "react";
 import ConversationsItem from './ConversationItem';
 import './myStyles.css';
-// import 
 
 function Sidebar() {
     const [conversations, setConverations] = useState([
         {
+            id: 1,
             name: "Test#1",
             lastMessage: "Last Message #1",
             timeStamp: "today"
         },
         {
+            id: 2,
             name: "Test#2",
             lastMessage: "Last Message #2",
             timeStamp: "today",
         },
         {
+            id: 3,
             name: "Test#3",
             lastMessage: "Last Message #3",
             timeStamp: "today",
@@ -59,7 +61,7 @@ function Sidebar() {
         <div className="sb-conversations">
             <div className="conversation-container">
                 {conversations.map((conversation) => {
-                    return <ConversationsItem props={conversation} />
+                    return <ConversationsItem props={conversation} key={conversation.name}/>
                 })}
             </div>
         </div>
