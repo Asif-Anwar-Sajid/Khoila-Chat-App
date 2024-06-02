@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-function ConversationsItem({props}) {
+function ConversationItem({props}) {
     const navigate = useNavigate();
     console.log(props)
     return (
@@ -13,4 +13,4 @@ function ConversationsItem({props}) {
     );
 }
 
-export default ConversationsItem;
+export default ConversationItem;

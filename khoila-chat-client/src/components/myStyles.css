@@ -11,6 +11,12 @@
   height: 1.25em !important;
 }
 
+.reverseIcon {
+  width: 1.25em !important;
+  height: 1.25em !important;
+  display: none !important;
+}
+
 .main-container {
   background-color: #f4f5f8;
   /* background-color: lightskyblue; */
@@ -350,4 +356,84 @@
 
 .ug-list::-webkit-scrollbar {
   display: none;
+}
+
+.hideIcon {
+  display: none;
+  pointer-events: none;
+}
+
+.reverseIcon {
+  width: 1.25em !important;
+  height: 1.25em !important;
+  display: none !important;
+}
+
+.past-chats-header {
+  font-family: "Happy Monkey", system-ui;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+  margin: 10px 5px;
+}
+.past-conversation-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.past-conversations {
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin: 10px;
+  flex: 1;
+  overflow-y: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+@media only screen and (max-width: 40em) {
+  .sb-search {
+    display: none;
+  }
+  .sb-conversations {
+    display: none;
+  }
+  .sb-header {
+    flex-direction: column;
+    flex: 1;
+    width: max-content;
+    /* justify-content: center; */
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+  }
+
+  .sb-header-half {
+    display: flex;
+    flex-direction: column;
+  }
+  .chatArea-container {
+    flex: 1;
+  }
+  .sidebar-container {
+    flex: 0;
+  }
+  .main-container {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+  }
+
+  .reverseIcon {
+    display: block !important;
+  }
+
+  .sb-subheader {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .hideIcon {
+    display: block !important;
+    pointer-events: none !important;
+  }
 }

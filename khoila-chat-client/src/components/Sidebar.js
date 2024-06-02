@@ -5,12 +5,13 @@ import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import SearchIcon from '@mui/icons-material/Search';
+import SmsIcon from '@mui/icons-material/Sms';
 import { IconButton } from "@mui/material";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { toggleTheme } from '../features/themeSlice';
-import ConversationsItem from './ConversationItem';
+import ConversationItem from './ConversationItem';
 import './myStyles.css';
 
 function Sidebar() {
@@ -45,12 +46,16 @@ function Sidebar() {
     return (
         <div className="sidebar-container">
             <div className={"sb-header" + (lightTheme ? "" : " dark")}>
-                <div>
+                <div class="sb-subheader">
                     <IconButton>
                         <AccountCircleIcon className={"icon" + (lightTheme ? "" : " dark")} />
                     </IconButton>
+                    <IconButton className = "reverseIcon" onClick={() => { navigate('past-chats'); }}>
+                        <SmsIcon className={"reverseIcon" + (lightTheme ? "" : " dark")}/>
+                    </IconButton>
+
                 </div>
-                <div>
+                <div className="sb-header-half">
                     <IconButton onClick={() => { navigate('users'); }}>
                         <PersonAddAlt1Icon className={"icon" + (lightTheme ? "" : " dark")} />
                     </IconButton>
@@ -66,7 +71,7 @@ function Sidebar() {
                     </IconButton>
                 </div>
             </div>
-            <div className={"sb-header" + (lightTheme ? "" : " dark")}>
+            <div className={"sb-search" + (lightTheme ? "" : " dark")}>
                 <IconButton>
                     <SearchIcon className={"icon" + (lightTheme ? "" : " dark")} />
                 </IconButton>
@@ -75,7 +80,7 @@ function Sidebar() {
             <div className={"sb-conversations" + (lightTheme ? "" : " dark")}>
                 <div className={"conversation-container" + (lightTheme ? "" : " dark")}>
                     {conversations.map((conversation) => {
-                        return <ConversationsItem props={conversation} key={conversation.id} />
+                        return <ConversationItem props={conversation} key={conversation.id} />
                     })}
                 </div>
             </div>
