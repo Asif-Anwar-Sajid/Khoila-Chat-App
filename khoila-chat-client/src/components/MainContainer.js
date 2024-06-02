@@ -1,14 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Sidebar from './Sidebar';
-import UsersGroups from "./UsersGroups.js";
 import './myStyles.css';
 function MainContainer() {
     return <div className="main-container">
-        <Sidebar /> 
-        {/* <CreateGroups /> */}
-        {/* <Welcome /> */}
-        {/* <ChatArea /> */}
-        <UsersGroups />
+        <Sidebar />
+        <Outlet />
     </div>;
 }
 

@@ -6,7 +6,7 @@ import MessageOthers from './MessageOthers.js';
 import MessageSelf from './MessageSelf.js';
 import './myStyles.css';
 
-function ChatArea({ props }) {
+function ChatArea({props}) {
     // const [conversations, setConverations] = useState([
     //     {
     //         id: 1,
@@ -29,10 +29,10 @@ function ChatArea({ props }) {
     // ]);
     return <div className="chatArea-container">
         <div className="chatArea-header">
-            <p className="con-icon">S</p>
+            <p className="con-icon">{props.name[0]}</p>
             <div className="header-text">
-                <p className="con-title">fd</p>
-                <p className="con-timeStamp">online</p>
+                <p className="con-title">{props.name}</p>
+                <p className="con-timeStamp">{props.currentStatus}</p>
             </div>
             <IconButton>
                 <DeleteIcon />

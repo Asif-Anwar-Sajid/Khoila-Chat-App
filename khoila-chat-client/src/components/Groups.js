@@ -5,7 +5,7 @@ import logo from "../assets/chat-bubble.png";
 import "./myStyles.css";
 
 
-function UsersGroups() {
+function Groups() {
     return <div className="list-container">
         <div className="ug-header">
             <img 
@@ -13,7 +13,7 @@ function UsersGroups() {
                 style={{height: "2rem", width: "2rem", marginLeft: "10px"}}
                 alt = "Logo"
             />
-            <p className="ug-title">Online Users</p>
+            <p className="ug-title">Online Groups</p>
         </div>
         <div className="sb-search">
             <IconButton>
@@ -24,54 +24,63 @@ function UsersGroups() {
         <div className="ug-list">
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
             <div className="list-item">
                 <p className="con-icon">T</p>
-                <p className="con-title">Test User</p>
+                <p className="con-title">Test Group</p>
+
             </div>
         </div>
     </div>
 }
 
-export default UsersGroups;
+export default Groups;

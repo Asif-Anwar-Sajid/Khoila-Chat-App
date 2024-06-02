@@ -6,6 +6,7 @@ import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from "@mui/material";
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import ConversationsItem from './ConversationItem';
 import './myStyles.css';
 
@@ -30,6 +31,7 @@ function Sidebar() {
             timeStamp: "today",
         },
     ]);
+    const navigate = useNavigate();
     return <div className="sidebar-container">
         <div className="sb-header">
             <div>
@@ -38,13 +40,13 @@ function Sidebar() {
                 </IconButton>
             </div>
             <div>
-                <IconButton>
+                <IconButton onClick={() => {navigate('users');}}>
                     <PersonAddAlt1Icon />
                 </IconButton>
-                <IconButton>
+                <IconButton onClick={() => {navigate('groups');}}>
                     <GroupAddIcon />
                 </IconButton>
-                <IconButton>
+                <IconButton onClick={() => {navigate('create-groups');}}>
                     <AddCircleIcon />
                 </IconButton>
                 <IconButton>
@@ -61,7 +63,7 @@ function Sidebar() {
         <div className="sb-conversations">
             <div className="conversation-container">
                 {conversations.map((conversation) => {
-                    return <ConversationsItem props={conversation} key={conversation.name}/>
+                    return <ConversationsItem props={conversation} key={conversation.name} />
                 })}
             </div>
         </div>
