@@ -1,11 +1,11 @@
 import React from "react";
 import './App.css';
-import Login from './components/Login.js';
+import MainContainer from "./components/MainContainer";
 
 function App() {
   return <div className="App">
-    {/* <MainContainer /> */}
-    <Login />
+    <MainContainer />
+    {/* <Login /> */}
   </div>;
 }
 
