@@ -12,6 +12,7 @@ import Welcome from "./components/Welcome";
 function App() {
   return <div className="App">
     {/* <MainContainer /> */}
+    {/* <Sidebar /> */}
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="app" element={<MainContainer />}>

@@ -7,12 +7,16 @@ import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from "@mui/material";
 import React, { useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { toggleTheme } from '../features/themeSlice';
 import ConversationsItem from './ConversationItem';
 import './myStyles.css';
 
 function Sidebar() {
-    const [lightTheme, setLightTheme] = useState(true);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const lightTheme = useSelector((state) => state.theme.themeKey);
     const [conversations, setConverations] = useState([
         {
             id: 1,
@@ -33,46 +37,50 @@ function Sidebar() {
             timeStamp: "today",
         },
     ]);
-    const navigate = useNavigate();
-    return <div className="sidebar-container">
-        <div className={"sb-header" + (lightTheme ? "" : " dark")}>
-            <div>
+
+    const handleToggleTheme = () => {
+        dispatch(toggleTheme());
+    };
+
+    return (
+        <div className="sidebar-container">
+            <div className={"sb-header" + (lightTheme ? "" : " dark")}>
+                <div>
+                    <IconButton>
+                        <AccountCircleIcon className={"icon" + (lightTheme ? "" : " dark")} />
+                    </IconButton>
+                </div>
+                <div>
+                    <IconButton onClick={() => { navigate('users'); }}>
+                        <PersonAddAlt1Icon className={"icon" + (lightTheme ? "" : " dark")} />
+                    </IconButton>
+                    <IconButton onClick={() => { navigate('groups'); }}>
+                        <GroupAddIcon className={"icon" + (lightTheme ? "" : " dark")} />
+                    </IconButton>
+                    <IconButton onClick={() => { navigate('create-groups'); }}>
+                        <AddCircleIcon className={"icon" + (lightTheme ? "" : " dark")} />
+                    </IconButton>
+                    <IconButton onClick={handleToggleTheme}>
+                        {lightTheme && <DarkModeIcon className={"icon" + (lightTheme ? "" : " dark")} />}
+                        {!lightTheme && <LightModeIcon className={"icon" + (lightTheme ? "" : " dark")} />}
+                    </IconButton>
+                </div>
+            </div>
+            <div className={"sb-header" + (lightTheme ? "" : " dark")}>
                 <IconButton>
-                    <AccountCircleIcon className={"icon" + (lightTheme ? "" : " dark")}/>
+                    <SearchIcon className={"icon" + (lightTheme ? "" : " dark")} />
                 </IconButton>
+                <input placeholder="search" className={"search-box" + (lightTheme ? "" : " dark")} />
             </div>
-            <div>
-                <IconButton onClick={() => {navigate('users');}}>
-                    <PersonAddAlt1Icon className={"icon" + (lightTheme ? "" : " dark")}/>
-                </IconButton>
-                <IconButton onClick={() => {navigate('groups');}}>
-                    <GroupAddIcon className={"icon" + (lightTheme ? "" : " dark")}/>
-                </IconButton>
-                <IconButton onClick={() => {navigate('create-groups');}}>
-                    <AddCircleIcon className={"icon" + (lightTheme ? "" : " dark")}/>
-                </IconButton>
-                <IconButton onClick={()=>setLightTheme((prevValue) => {
-                    return !prevValue;
-                })}>
-                    { lightTheme && <DarkModeIcon className={"icon" + (lightTheme ? "" : " dark")}/> } 
-                    { !lightTheme && <LightModeIcon className={"icon" + (lightTheme ? "" : " dark")}/>}
-                </IconButton>
+            <div className={"sb-conversations" + (lightTheme ? "" : " dark")}>
+                <div className={"conversation-container" + (lightTheme ? "" : " dark")}>
+                    {conversations.map((conversation) => {
+                        return <ConversationsItem props={conversation} key={conversation.id} />
+                    })}
+                </div>
             </div>
         </div>
-        <div className={"sb-header" + (lightTheme ? "" : " dark")}>
-            <IconButton>
-                <SearchIcon className={"icon" + (lightTheme ? "" : " dark")}/> 
-            </IconButton>
-            <input placeholder="search" className={"search-box" + (lightTheme ? "" : " dark")}/>
-        </div>
-        <div className={"sb-conversations" + (lightTheme ? "" : " dark")}>
-            <div className={"conversation-container" + (lightTheme ? "" : " dark")}>
-                {conversations.map((conversation) => {
-                    return <ConversationsItem props={conversation} key={conversation.name} />
-                })}
-            </div>
-        </div>
-    </div>
+    );
 }
 
 export default Sidebar;
