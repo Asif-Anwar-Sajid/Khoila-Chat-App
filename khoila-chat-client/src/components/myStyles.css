@@ -311,15 +311,16 @@
   padding: 20px 5px;
   margin: 10px;
   gap: 10px;
-  transition-duration: 0.5s;
 }
 
 .list-item:hover {
-  background-color: rgb(226, 226, 226);
+  background-color: #d9d9d9 !important;
+  transition-duration: 0.5s;
 }
 
 .list-item:active {
-  background-color: white;
+  background-color: white !important;
+  transition-duration: 0.5s;
 }
 
 .ug-header {
@@ -344,6 +345,7 @@
   overflow: scroll;
   scrollbar-width: none;
   padding: 10px;
+  border-radius: 20px;
 }
 
 .ug-list::-webkit-scrollbar {

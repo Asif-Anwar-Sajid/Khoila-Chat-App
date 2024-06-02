@@ -17,66 +17,77 @@ function Groups() {
             />
             <p className={"ug-title" + (lightTheme ? "" : " dark")}>Online Groups</p>
         </div>
-        <div className="sb-search">
+        <div className={"sb-search" + (lightTheme ? "" : " dark")}>
             <IconButton>
                 <SearchIcon /> 
             </IconButton>
-            <input placeholder="search" className="search-box"/>
+            <input placeholder="search" className={"search-box" + (lightTheme ? "" : " dark")} />
         </div>
         <div className="ug-list">
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+                    <p className={"con-icon"}>T</p>
+                <p className="con-title">Test Group</p>
+            </div>
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
             </div>
-            <div className="list-item">
-                <p className="con-icon">T</p>
-                <p className="con-title">Test Group</p>
-            </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
             </div>
-            <div className="list-item">
+            <div className={"list-item" + (lightTheme ? "" : " dark")}>
+
                 <p className="con-icon">T</p>
                 <p className="con-title">Test Group</p>
 
